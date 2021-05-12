@@ -11,10 +11,15 @@ const initialState = {
 const reducer = (state=initialState, action) => {
     switch(action.type) {
         case DELETE_MOVIE:
+            console.log(action.payload);
             return {
-                ...state,
                 movies: state.movies.filter(item=>(action.payload !== item.id))
             }
+        // case ADD_MOVIE:
+        //     return {
+        //         ...state,
+
+        //     }
         default:
             return state;
     }
